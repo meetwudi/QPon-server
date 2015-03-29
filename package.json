@@ -1,0 +1,19 @@
+{
+  "name": "QPon-server",
+  "version": "1.0.0",
+  "description": "Server side application for QPon.",
+  "main": "bin/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjwudi/QPon-server.git"
+  },
+  "author": "John Wu <webmaster@leapoahead.com> (http://www.leapoahead.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjwudi/QPon-server/issues"
+  },
+  "homepage": "https://github.com/tjwudi/QPon-server"
+}
