@@ -1,3 +1,5 @@
+'use strict';
+
 var db = require('../../../lib/db/db');
 
 describe('MongoDB', function() {
