@@ -11,4 +11,10 @@ describe('Runner', function() {
     runner.on('taskFinish', done);
     runner.taskFinish();
   });
+
+  it('should throw when unimplemented run() gets called', function() {
+    (function() {
+      runner.run();
+    }).should.throw();
+  });
 });
