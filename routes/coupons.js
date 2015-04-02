@@ -10,7 +10,7 @@ router.get('/search', function(req, res) {
     field: req.query['field'] || 'title'
   };
   if (!query.keyword) {
-    return res.json({error: 'Keyword is required'});
+    return res.status(400).json({error: 'Keyword is required'});
   }
 
   var filterObj = {};
