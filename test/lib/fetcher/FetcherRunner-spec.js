@@ -1,3 +1,5 @@
+'use strict';
+
 var FetcherRunner = require('../../../lib/fetcher/FetcherRunner');
 
 var fetcherRunner;

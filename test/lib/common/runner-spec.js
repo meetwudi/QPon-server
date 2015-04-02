@@ -1,3 +1,5 @@
+'use strict';
+
 var Runner = require('../../../lib/common/runner');
 
 var runner;
