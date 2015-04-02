@@ -1,3 +1,31 @@
 #!/usr/bin/env node
 
 'use strict';
+
+var FetcherRunner = require('../lib/fetcher/FetcherRunner');
+
+var runners = [
+  new FetcherRunner()
+],
+  INTERVAL = 10000,
+  nextExecRunnerIdx = 0;
+
+console.log(`Scheduler run at ${INTERVAL}ms interval`);
+
+function tick() {
+  var currentRunner = runners[nextExecRunnerIdx];
+  console.log(`-------- Runner tick --------`);
+  console.log(`Runner Type: ${currentRunner.constructor.name}`);
+
+  nextExecRunnerIdx++;
+  nextExecRunnerIdx %= runners.length;
+  currentRunner.on('taskFinish', function() {
+    console.log(`Task finished`);
+    setTimeout(tick, INTERVAL);
+    currentRunner.removeAllListeners('taskFinish');
+  });
+  currentRunner.run();
+}
+
+tick();
+
