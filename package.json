@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha test --recursive -t 10000 --require should"
+    "test": "mocha test --recursive -t 30000 --require should -R spec"
   },
   "dependencies": {
     "bluebird": "^2.9.21",
