@@ -2,10 +2,12 @@
 
 'use strict';
 
-var FetcherRunner = require('../lib/fetcher/FetcherRunner');
+var FetcherRunner = require('../lib/fetcher/FetcherRunner'),
+  TransformerRunner = require('../lib/transformer/TransformerRunner');
 
 var runners = [
-  new FetcherRunner()
+  new FetcherRunner(),
+  new TransformerRunner()
 ],
   INTERVAL = 10000,
   nextExecRunnerIdx = 0;
