@@ -13,7 +13,7 @@ var runners = [
   new TransformerRunner(),
   new TransformerRunner()
 ],
-  INTERVAL = 10000,
+  INTERVAL = 2000,
   nextExecRunnerIdx = 0;
 
 console.log(`Scheduler run at ${INTERVAL}ms interval`);
